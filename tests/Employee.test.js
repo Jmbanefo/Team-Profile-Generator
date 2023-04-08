@@ -11,7 +11,7 @@ describe("Employee", () => {
         expect(employee.getName().toEqual("Justin")); 
     })
     test("new employee id", () => { 
-        expect(employee.getId().toEqual("0306"))
+        expect(employee.getId().toEqual(0306))
     })
     test("new employee email", () => { 
         expect(employee.getEmail().toEqual("mbanefojustin@gmail.com"))
