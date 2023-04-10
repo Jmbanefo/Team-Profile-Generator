@@ -37,7 +37,8 @@ const menuQuestions = [
         type: "list", 
         menu: "team_member", 
         message: "Please select your additional team member.", 
-        choices: ["Add an intern?", "Add an engineer?", "No additions"], 
+        choices: ["Add an intern?", "Add an engineer?", "No additions"],
+        name: "my_team"
     }
 ]
 

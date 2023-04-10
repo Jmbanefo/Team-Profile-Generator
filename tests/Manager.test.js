@@ -11,12 +11,12 @@ describe("Manager", () => {
         expect(newManager.getId()).toEqual(1234); 
     })
     test("test manager email", () => { 
-        expect(newManager.getEmail()).toEqual("Jackson@gmail.com"); 
+        expect(newManager.getEmail()).toEqual("jackson@gmail.com"); 
     })
     test("test manager office number", () => { 
         expect(newManager.getOfficeNumber()).toEqual(8675309); 
     })
-    test("test intern role", () => { 
+    test("test manager role", () => { 
         expect(newManager.getRole()).toEqual("manager"); 
     })
     
