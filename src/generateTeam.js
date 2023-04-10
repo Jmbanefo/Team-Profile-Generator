@@ -1,4 +1,8 @@
+const Employee = require("../lib/Employee");
 
+// let managers = []; 
+// let engineers = []; 
+// let interns = [];
 
 function newManager (manager){ 
     return `<div class="cards"> 
@@ -34,10 +38,41 @@ function newIntern (intern){
     </ul>
 </div>`
 }
+
+function cardsData (data) { 
+    let totalEmployees = []; 
+
+    for (let i = 0; i < data.length; i++) {
+        
+        let thisEmployee = data[i]
+        let thisRole = thisEmployee.getRole(); 
+
+        if(role == "Manager")
+        { 
+            let managers = newManager(thisEmployee); 
+            totalEmployees.push(managers)
+        }
+        if(role == "Engineer")
+        { 
+            let engineers = newEngineer(thisEmployee); 
+            totalEmployees.push(engineers)
+        }
+        if(role == "Intern")
+        { 
+            let interns = newIntern(thisEmployee); 
+            totalEmployees.push(interns)
+        }
+    }
+    const team = totalEmployees.join(""); 
+    const generateTeampage = generateTeam(team); 
+
+    return generateTeampage; 
+
+}
 //Final Additions go send to HTML 
 function generateTeam(team) { 
 
-retunrn `<!DOCTYPE html>
+return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +81,16 @@ retunrn `<!DOCTYPE html>
     <title>My Team Profile</title>
 </head>
 
-`
+<body> 
+<!-- <h1>Welcome to my team!</h1>
+</body>
+
+<main>
+${team}
+</main>
+
+</html>`
+
 }
 
 
@@ -59,4 +103,4 @@ retunrn `<!DOCTYPE html>
 
 
 
-module.exports = generateTeam; 
+module.exports = cardsData; 
