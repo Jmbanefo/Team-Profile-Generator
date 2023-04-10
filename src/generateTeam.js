@@ -11,7 +11,7 @@ function newManager (manager){
     <ul class="list-group">
         <li class="item">ID: ${manager.id}</li>
         <li class="item">Email: ${manager.email}</li>
-        <li class="item">Office number: ${manager.getNumber()}</li>
+        <li class="item">Office number: ${manager.getOfficeNumber()}</li>
     </ul>
 </div>`
 }
@@ -47,17 +47,17 @@ function cardsData (data) {
         let thisEmployee = data[i]
         let thisRole = thisEmployee.getRole(); 
 
-        if(role == "Manager")
+        if(thisRole == "Manager")
         { 
             let managers = newManager(thisEmployee); 
             totalEmployees.push(managers)
         }
-        if(role == "Engineer")
+        if(thisRole == "Engineer")
         { 
             let engineers = newEngineer(thisEmployee); 
             totalEmployees.push(engineers)
         }
-        if(role == "Intern")
+        if(thisRole == "Intern")
         { 
             let interns = newIntern(thisEmployee); 
             totalEmployees.push(interns)

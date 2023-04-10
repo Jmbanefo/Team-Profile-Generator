@@ -110,9 +110,9 @@ function newMenu() {
     inquirer.prompt(menuQuestions)
         .then((response) => { 
             
-        if(response.newMenu === "Add an engineer?"){ 
+        if(response.newMenu == "Add an engineer?"){ 
             inquirer.prompt(engineerQuestions)
-            .then ((response) => { 
+            .then((response) => { 
             const engineer = new Engineer( 
                 response.name_engineer, 
                 response.id_engineer, 
@@ -123,10 +123,10 @@ function newMenu() {
             newMenu(); 
         })  
      } 
-        else if(response.newMenu === "Add an intern?"){
+        else if(response.newMenu == "Add an intern?"){
             inquirer.prompt(internQuestions)
             .then((response) => { 
-                const inter = new Intern( 
+                const intern = new Intern( 
                     response.name_intern, 
                     response.id_intern, 
                     response.email.intern, 
@@ -138,7 +138,7 @@ function newMenu() {
     }
         else { 
             console.log(employees);
-            fs.writeFile("./dist/index.html", employees, (err) => 
+            fs.writeFile("./dist/index.html", generateTeam(employees), (err) => 
             err ? console.log(err) : console.log("Succesfully Added")); 
 
         }
