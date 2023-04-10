@@ -110,7 +110,7 @@ function newMenu() {
     inquirer.prompt(menuQuestions)
         .then((response) => { 
             
-        if(response.newMenu == "Add an engineer?"){ 
+        if(response.my_team == "Add an engineer?"){ 
             inquirer.prompt(engineerQuestions)
             .then((response) => { 
             const engineer = new Engineer( 
@@ -123,14 +123,14 @@ function newMenu() {
             newMenu(); 
         })  
      } 
-        else if(response.newMenu == "Add an intern?"){
+        else if(response.my_team == "Add an intern?"){
             inquirer.prompt(internQuestions)
             .then((response) => { 
                 const intern = new Intern( 
                     response.name_intern, 
                     response.id_intern, 
-                    response.email.intern, 
-                    response.school.intern, 
+                    response.email_intern, 
+                    response.school_intern, 
                 )
                 employees.push(intern); 
                 newMenu(); 
