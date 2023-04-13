@@ -23,7 +23,7 @@ function newEngineer (engineer){
     <ul class="list-group">
         <li class="item">ID: ${engineer.id}</li>
         <li class="item">Email: <a href ="mailto:${engineer.email}">${engineer.email} </a></li>
-        <li class="item">Github username: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</li>
+        <li class="item">Github username: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
     </ul>
 </div> `
 }
