@@ -10,10 +10,10 @@ function newManager (manager){
     <h3>${manager.getRole()}</h3>
     <ul class="list-group">
         <li class="item">ID: ${manager.id}</li>
-        <li class="item">Email: ${manager.email}</li>
+        <li class="item">Email: <a href ="mailto:${manager.email}">${manager.email}</a></li>
         <li class="item">Office number: ${manager.getOfficeNumber()}</li>
     </ul>
-</div>`
+</div> `
 }
 
 function newEngineer (engineer){ 
@@ -22,10 +22,10 @@ function newEngineer (engineer){
     <h3>${engineer.getRole()}</h3>
     <ul class="list-group">
         <li class="item">ID: ${engineer.id}</li>
-        <li class="item">Email: ${engineer.email}</li>
-        <li class="item">Office number: ${engineer.getGitHub()}</li>
+        <li class="item">Email: <a href = "mailto:${engineer.email}">${engineer.email} </a></li>
+        <li class="item">Github username: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</li>
     </ul>
-</div>`
+</div> `
 }
 function newIntern (intern){ 
     return `<div class="cards"> 
@@ -33,10 +33,10 @@ function newIntern (intern){
     <h3>${intern.getRole()}</h3>
     <ul class="list-group">
         <li class="item">ID: ${intern.id}</li>
-        <li class="item">Email: ${intern.email}</li>
-        <li class="item">Office number: ${intern.getSchool()}</li>
+        <li class="item">Email: <a href = "mailto:${intern.email}">${intern.email}</a></li>
+        <li class="item">School name: ${intern.getSchool()}</li>
     </ul>
-</div>`
+</div> `
 }
 
 function cardsData (data) { 
@@ -79,6 +79,7 @@ return `<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Team Profile</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body> 

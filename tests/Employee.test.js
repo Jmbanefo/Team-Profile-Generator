@@ -4,14 +4,14 @@ const { describe } = require("yargs");
 const Employee = require("../lib/Employee"); 
 
 //this is diff 
-const employee = new Employee ("Justin", 0306, "mbanefojustin@gmail.com")
+const employee = new Employee ("Justin", "0306", "mbanefojustin@gmail.com")
 
 describe("Employee", () => { 
     test("new employee", () => { 
         expect(employee.getName().toEqual("Justin")); 
     })
     test("new employee id", () => { 
-        expect(employee.getId().toEqual(0306))
+        expect(employee.getId().toEqual("0306"))
     })
     test("new employee email", () => { 
         expect(employee.getEmail().toEqual("mbanefojustin@gmail.com"))
