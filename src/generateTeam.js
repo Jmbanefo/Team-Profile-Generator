@@ -22,7 +22,7 @@ function newEngineer (engineer){
     <h3>${engineer.getRole()}</h3>
     <ul class="list-group">
         <li class="item">ID: ${engineer.id}</li>
-        <li class="item">Email: <a href = "mailto:${engineer.email}">${engineer.email} </a></li>
+        <li class="item">Email: <a href ="mailto:${engineer.email}">${engineer.email} </a></li>
         <li class="item">Github username: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</li>
     </ul>
 </div> `
@@ -33,7 +33,7 @@ function newIntern (intern){
     <h3>${intern.getRole()}</h3>
     <ul class="list-group">
         <li class="item">ID: ${intern.id}</li>
-        <li class="item">Email: <a href = "mailto:${intern.email}">${intern.email}</a></li>
+        <li class="item">Email: <a href ="mailto:${intern.email}">${intern.email}</a></li>
         <li class="item">School name: ${intern.getSchool()}</li>
     </ul>
 </div> `
