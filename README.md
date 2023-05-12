@@ -3,7 +3,7 @@
     
   This is an application that takes the user's input and displays team information. The project uses node inquirer in the command line and creates a HTML webpage. The page describes the teams names, roles, and contact information. 
 
-  Here is a video link demonstrating the application: https://watch.screencastify.com/v/c42lr9likprbEZbJXsnNLinks to an external site.
+  Here is a video link demonstrating the application: [https://watch.screencastify.com/v/c42lr9likprbEZbJXsnNLinks ](https://watch.screencastify.com/v/c42lr9likprbEZbJXsnN)to an external site.
   
 
   ## Table of Contents
